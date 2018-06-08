@@ -24,11 +24,11 @@ $(window).scroll(function(){
 
 function loadImages(){
   if (currentPhotoIndex < finalPhotoIndex) {
-    $("#spinner-container").show();
+    $(".lds-spinner").show();
     retrieveImages();
   }
   else{
-    $("#spinner-container").hide();
+    $(".lds-spinner").hide();
   }
 }
 
@@ -37,10 +37,10 @@ function retrieveImages(){
         var imageRef = storageRef.child('Switch-' + element + '.jpeg');
         imageRef.getDownloadURL().then(function(url) {
           $("#gallery-row").append('<div class="col-sm-6 col-md-4"><a class="lightbox" target="_blank" href="'+ url + '"><img src="' + url +'" alt="photo"></a></div>');
-          $("#spinner-container").hide();
+          $(".lds-spinner").hide();
         }).catch(function(error) {
            console.log(error);
-           $("#spinner-container").hide();
+           $(".lds-spinner").hide();
         });
     }
   currentPhotoIndex += photoIncrement;
