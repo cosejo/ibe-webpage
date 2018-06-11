@@ -1,18 +1,18 @@
-var config =
-    {
-      apiKey: "AIzaSyCh_EZdj8IFauy5pDAgQiyUkjNx-Fr_Y_0",
-      authDomain: "switch-photobooth.firebaseapp.com",
-      databaseURL: "https://switch-photobooth.firebaseio.com",
-      projectId: "switch-photobooth",
-      storageBucket: "switch-photobooth.appspot.com",
-    };
+var config = {
+    apiKey: "AIzaSyA7t47Cn9adb39lPVWuMCRqbBheXct6css",
+    authDomain: "switch-09-06-18.firebaseapp.com",
+    databaseURL: "https://switch-09-06-18.firebaseio.com",
+    projectId: "switch-09-06-18",
+    storageBucket: "switch-09-06-18.appspot.com",
+    messagingSenderId: "564062165167"
+  };
 
 firebase.initializeApp(config);
 var storage = firebase.storage();
 var storageRef = storage.ref();
 var currentPhotoIndex = 1
 var photoIncrement = 3
-var finalPhotoIndex = 38
+var finalPhotoIndex = 127
 
 loadImages();
 
