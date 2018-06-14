@@ -768,7 +768,9 @@ var filesJson = {
  ]
 };
 
-loadImages();
+$(document).ready(function(){
+  loadImages();
+});
 
 $(window).scroll(function(){
      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
