@@ -1,6 +1,6 @@
 var currentPhotoIndex = 0
 var photoIncrement = 3;
-var finalPhotoIndex = 127;
+var finalPhotoIndex = 126;
 var filesJson = {
  "files": [
   {
@@ -787,9 +787,9 @@ function loadImages(){
 }
 
 function retrieveImages(){
-      for (element = currentPhotoIndex; element < currentPhotoIndex+photoIncrement; element++) {
-          $("#gallery-row").append('<div class="col-sm-6 col-md-4"><a class="lightbox" target="_blank" href="http://drive.google.com/uc?export=view&id=' + filesJson.files[element].id + '""><img src="http://drive.google.com/uc?export=view&id=' + filesJson.files[element].id + '"alt="photo"></a></div>');
+    for (element = currentPhotoIndex; element < currentPhotoIndex+photoIncrement; element++) {
+        $("#gallery-row").append('<div class="col-sm-6 col-md-4"><a class="lightbox" target="_blank" href="http://drive.google.com/uc?export=view&id=' + filesJson.files[element].id + '""><img src="http://drive.google.com/uc?export=view&id=' + filesJson.files[element].id + '"alt="photo"></a></div>');
     }
-    $(".lds-spinner").hide();
+  $(".lds-spinner").hide();
   currentPhotoIndex += photoIncrement;
 }
